@@ -58,12 +58,15 @@ Yes, but note that they will be treated like strings. To be on the save side in 
 | ------------- |-------------| -----|
 | setParam      | key, value, options | Updates the param in URL. If the param was not set before, it will be appended to URL. Options are optional, you can pass an options object with ```{doNotCreateHistoryState: true}``` which might be useful for some cases |
 | setFreshParams      | objectWithNewParams, options |   Resets all existing params and sets new params. Optional ```doNotCreateHistoryState```  |
+| setDefaultRootParams | - | Sets some params if user visited the root of URL. Use this to set some initial state, for example load a content of default tab |
 | removeParam | key, options | Removes a chosen param. For example you can remove a param to close a modal. Optional ```doNotCreateHistoryState``` which might be useful to prevent back button to reopen the modal again. |
 | getParam | key | Returns an object with value of selected param |
 | getAllParams | - | Returns an object with all query string params |
 | onParamChange | key, actionFunction(value) | Takes function as a second argument, that will be triggered each time the param is changed. The first argument of this function contains the value of the changed param.  |
 | retriggerOnParamChange | key | Reruns the action for a specified param. This is useful when you need to rerun the action even when param hasn't been changed. For example when you load something with ajax, you can retrigger the action when loading is finished  |
 | retriggerOnParamChangeForAll | - | Reruns the action for all the params. |
+
+
 
 ## Example usages:
 #### Showing/hiding modals and overlays with different content that is loaded with ajax
