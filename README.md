@@ -45,10 +45,41 @@ When you click the ```#tab-contact```
 - the onParamChange action will be triggered
 
 ## FAQ:
-### Are onParamChange actions retriggered each time I set params?
+#### Are onParamChange actions retriggered each time I set params?
 No, the action will only run when param changed. This prevents the unneccessary flickering of screen and redundant DOM updates.
 
 ## Example usages:
+#### Showing/hiding modals
+```javascript
+
+```
+#### Switching a flag when a certain link was opened
+```javascript
+QueryStringRouter.onParamChange('trial', function(value) {
+    console.log(value);
+    if (value == 'true') {
+        //set flag to true
+    } else if (value == 'false') {
+        //set flag to false
+    }
+});
+```
+#### Loading content into central panel, for example loading folder content
+```javascript
+QueryStringRouter.onParamChange('folderPath' , function(value) {
+    if (typeof value != 'undefined') {
+        console.log('in the central panel, a folder with path '+value+' will be loaded');
+        $('.central-panel-wrapper').fadeOut(140, function() {
+            $(this).load(value+" ".folder-content, function() {
+                setAsCurrent();
+                $(this).fadeIn(110);  
+            });            
+        });
+    }
+});
+```
+
+
 
 ## List of methods:
 | Method        | Arguments           | Description  |
