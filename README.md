@@ -87,6 +87,10 @@ QueryStringRouter.onParamChange('modalContent', function(value) {
     }
 });
 
+$(document).on('click', '#open-details-modal', function() {
+    QueryStringRouter.setParam('modalContent', '/modals/details'});
+});
+
 $(document).on('click', '#close-modal-button', function(event) {
     QueryStringRouter.removeParam('modalContent', {doNotCreateHistoryState: true});
 });
@@ -100,20 +104,6 @@ QueryStringRouter.onParamChange('trial', function(value) {
         //set flag to true
     } else if (value == 'false') {
         //set flag to false
-    }
-});
-```
-#### Loading content into central panel, for example loading folder content
-```javascript
-QueryStringRouter.onParamChange('folderPath' , function(value) {
-    if (typeof value != 'undefined') {
-        console.log('in the central panel, a folder with path '+value+' will be loaded');
-        $('.central-panel-wrapper').fadeOut(140, function() {
-            $(this).load(value+" ".folder-content, function() {
-                setAsCurrent();
-                $(this).fadeIn(110);  
-            });            
-        });
     }
 });
 ```
@@ -157,6 +147,30 @@ $(document).on('click', '[data-action-hide-search]', function(event) { //we use 
     QueryStringRouter.removeParam('showSearch', {doNotCreateHistoryState: true});
 });
 ```
+#### Loading content into central panel, for example loading folder content
+```javascript
+QueryStringRouter.onParamChange('folderPath' , function(value) {
+    if (typeof value != 'undefined') {
+        console.log('in the central panel, a folder with path '+value+' will be loaded');
+        $('.central-panel-wrapper').fadeOut(140, function() {
+            $(this).load(value+" ".folder-content, function() {
+                setAsCurrent();
+                $(this).fadeIn(110);  
+            });            
+        });
+    }
+});
+
+$(document).on('click', '[ajax-href]', function(e) {
+    ajax_href = $(this).attr('ajax-href');
+    ajax_source = $(this).attr('ajax-source'); //container to load from href
+
+    QueryStringRouter.setParam('folderPath', ajax_href);
+    //also make sure that search will be hidden when loading a folder
+    QueryStringRouter.removeParam('showSearch', {doNotCreateHistoryState: true});
+});
+```
+
 
 
 
