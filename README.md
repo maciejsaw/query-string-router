@@ -28,7 +28,7 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 ```
 ### Step 2: set the URL params, for example when something is clicked
 ```javascript
-$(document).on('click', #tab-contact, function() {
+$(document).on('click', '#tab-contact', function() {
   QueryStringRouter.setParam('activeTab', 'contact');
 }
 ```
