@@ -21,7 +21,8 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 ### Step 1: add router to your website
 - Your website needs to use jQuery
 - Add these scripts at the end of your HTML code, before the end of body tag
-```<script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/4d2b8b39/external-deps/mini-meteor.min.js"></script>
+```
+<script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/4d2b8b39/external-deps/mini-meteor.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/4d2b8b39/src/query-string-router.js"></script>
 ```
 ### Step 2: set the URL params, for example when something is clicked
@@ -47,7 +48,14 @@ When you click the ```#tab-contact```
 ### Are onParamChange actions retriggered each time I set params?
 No, the action will only run when param changed. This prevents the unneccessary flickering of screen and uneeded DOM updates.
 
-## Examples:
+## Example usages:
+
+## List of methods:
+| Method        | Arguments           | Description  |
+| ------------- |:-------------:| -----:|
+| setParam      | key, value, options | Updates the param in URL. If the param was not set before, it will be appended to URL. Options are options, you can write ```{doNotCreateHistoryState: true}``` which might be useful for some cases |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 ## Credits:
 QueryStringRouter is based on Meteor.js front-end libraries and [repackaged by Deanius](https://github.com/deanius/mini-meteor) 
