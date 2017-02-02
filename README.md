@@ -86,6 +86,10 @@ QueryStringRouter.onParamChange('modalContent', function(value) {
         }); 
     }
 });
+
+$(document).on('click', '#close-modal-button', function(event) {
+    QueryStringRouter.removeParam('modalContent', {doNotCreateHistoryState: true});
+});
 ```
 
 #### Switching a flag when a certain link was opened
@@ -149,7 +153,12 @@ QueryStringRouter.onParamChange('showSearch' , function(value) {
         console.log('search should not be shown');
     }
 });
+$(document).on('click', '[data-action-hide-search]', function(event) { //we use CSS attributes to bind action
+    QueryStringRouter.removeParam('showSearch', {doNotCreateHistoryState: true});
+});
 ```
+
+
 
 
 ## Credits:
