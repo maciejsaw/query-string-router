@@ -18,8 +18,33 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 
 ## Quick Start
 
-###: Step 1: add router to your website
+### Step 1: add router to your website
 - Your website needs to use jQuery
 - Add these scripts at the end of your HTML code, before the end of body tag
 ............
-###: Step 2: add
+### Step 2: set the URL params, for example when something is clicked
+```javascript
+$(document).on('click', #tab-contact, function() {
+  QueryStringRouter.setParam('activeTab', 'contact');
+}
+```
+### Step 3: define what should happen when URL changes
+```javascript
+QueryStringRouter.onParamChange('activeTab' , function(value) {
+	window.alert("active tab is set to " + value);
+});
+//Here we say that each time you update the activeTab 
+//param in the URL, we will show an alert that says "contact"
+```
+### Step 4: that's it
+When you click the ```#tab-contact``` 
+- the URL will update to ```www.yourpage.com/?actveTab=contact```
+- the onParamChange action will be triggered
+
+## FAQ:
+### Are onParamChange actions retriggered each time I set params?
+No, the action will only run when param changed. This prevents the unneccessary flickering of screen and uneeded DOM updates.
+
+## Examples:
+
+
