@@ -51,7 +51,7 @@ No, the action will only run when param changed. This prevents the unneccessary 
 #### Why there are 3 scripts to load?
 This package makes use of 'jQuery', 'jQuery deparam' plugin and 'mini-meteor.js'. I assume that you already have jQuery, so we need to load 'deparam' plugin, 'mini-meteor' and the 'query-string-router' itself
 #### Can I use boolean values in params?
-Yes, but note that they will be treated like strings, so to be on the save side in your conditional statements you should write ```if (value === 'true')```
+Yes, but note that they will be treated like strings, so to be on the save side in your conditional statements you should use quotations: ```if (value === 'true')``` 
 
 ## List of methods:
 | Method        | Arguments           | Description  |
