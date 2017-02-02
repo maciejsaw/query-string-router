@@ -52,10 +52,13 @@ No, the action will only run when param changed. This prevents the unneccessary 
 
 ## List of methods:
 | Method        | Arguments           | Description  |
-| ------------- |:-------------:| -----:|
-| setParam      | key, value, options | Updates the param in URL. If the param was not set before, it will be appended to URL. Options are options, you can write ```{doNotCreateHistoryState: true}``` which might be useful for some cases |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| ------------- |-------------| -----|
+| setParam      | key, value, options | Updates the param in URL. If the param was not set before, it will be appended to URL. Options are optional, you can write ```{doNotCreateHistoryState: true}``` which might be useful for some cases |
+| setFreshParams      | objectWithNewParams |   Resets all existing params and sets new params |
+| removeParam | key | Removes a chosen param. For example you can remove a param to close a modal |
+| getParam | key | Returns an object with value of selected param |
+| getAllParams | - | Returns an object with all query string params |
+
 
 ## Credits:
 QueryStringRouter is based on Meteor.js front-end libraries and [repackaged by Deanius](https://github.com/deanius/mini-meteor) 
