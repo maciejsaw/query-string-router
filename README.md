@@ -54,10 +54,13 @@ No, the action will only run when param changed. This prevents the unneccessary 
 | Method        | Arguments           | Description  |
 | ------------- |-------------| -----|
 | setParam      | key, value, options | Updates the param in URL. If the param was not set before, it will be appended to URL. Options are optional, you can write ```{doNotCreateHistoryState: true}``` which might be useful for some cases |
-| setFreshParams      | objectWithNewParams |   Resets all existing params and sets new params |
+| setFreshParams      | objectWithNewParams, options |   Resets all existing params and sets new params. Optional ```doNotCreateHistoryState```  |
 | removeParam | key | Removes a chosen param. For example you can remove a param to close a modal |
 | getParam | key | Returns an object with value of selected param |
 | getAllParams | - | Returns an object with all query string params |
+| onParamChange | key, actionFunction(value) | Takes function as a second argument, that will be triggered each time the param is changed. The first argument of this function contains the value of the changed param.  |
+| retriggerOnParamChange | key | Reruns the action for a specified param. This is useful when you need to rerun the action even when param hasn't been changed. For example when you load something with ajax, you can retrigger the action when loading is finished  |
+| retriggerOnParamChangeForAll | - | Reruns the action for all the params. |
 
 
 ## Credits:
