@@ -82,7 +82,6 @@ var QueryStringRouter = (function() {
 		console.log(options);
 		if (options.doNotCreateHistoryState === true) {
 			window.history.replaceState('','', '?'+newQueryString);
-			console.log('replace state');
 		} else {
 			window.history.pushState('','', '?'+newQueryString);
 		}
@@ -90,9 +89,13 @@ var QueryStringRouter = (function() {
 		$(window).trigger('popstate'); 
 	}
 
-	function setFreshParams(newParamsObj) {
+	function setFreshParams(newParamsObj, options) {
 		var newQueryString = $.param(newParamsObj);
-		window.history.pushState('','', '?'+newQueryString);
+		if (options.doNotCreateHistoryState === true) {
+			window.history.replaceState('','', '?'+newQueryString);
+		} else {
+			window.history.pushState('','', '?'+newQueryString);
+		}
 		$(window).trigger('popstate'); 
 	}
 
@@ -126,10 +129,19 @@ var QueryStringRouter = (function() {
 		});
 	}
 
+	function setDefaultRootParams(paramsObjects) {
+		$(document).ready(function() {
+			if (window.location.pathname === "/" & window.location.search === "") {
+				QueryStringRouter.setFreshParam(paramsObjects, {doNotCreateHistoryState: true});
+			}
+		});
+	}
+
 	return {
 		setParam: queryStringRouterSetParam,
 		getAllParams: processQueryStringParams,
 		setFreshParams: setFreshParams,
+		setInitialDefaultParams: setDefaultRootParams,
 		getParam: queryStringRouterGetReactiveParam,
 		onParamChange: onParamChange,
 		retriggerOnParamChange: retriggerOnParamChange,
