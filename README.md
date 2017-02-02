@@ -76,9 +76,6 @@ QueryStringRouter.onParamChange('modalContent', function(value) {
         $(".modal-wrapper").fadeOut(0).load(value+" "+".modal-content", function() {
             $(this).fadeIn(600);
         });  
-
-        //esc button closes modal, binded only after modal was opened
-        bindEscButtonToCloseModal();
     } else {
         $(".black-overlay-modal").fadeOut(300);
         $(".modal-box").fadeOut(300, function() {
@@ -170,9 +167,14 @@ $(document).on('click', '[ajax-href]', function(e) {
     QueryStringRouter.removeParam('showSearch', {doNotCreateHistoryState: true});
 });
 ```
-
-
-
+#### Hiding an overlay when escape key is used
+```javascript
+$(document).one('keydown.preview', function(event) {
+    if (event.which === 27) {
+        QueryStringRouter.removeParam('previewOpen', {doNotCreateHistoryState: true});
+    }
+});
+```
 
 
 ## Credits:
