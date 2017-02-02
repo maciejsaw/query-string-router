@@ -46,7 +46,7 @@ When you click the ```#tab-contact```
 
 ## FAQ:
 ### Are onParamChange actions retriggered each time I set params?
-No, the action will only run when param changed. This prevents the unneccessary flickering of screen and uneeded DOM updates.
+No, the action will only run when param changed. This prevents the unneccessary flickering of screen and redundant DOM updates.
 
 ## Example usages:
 
