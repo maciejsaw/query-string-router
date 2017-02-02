@@ -165,8 +165,6 @@ QueryStringRouter.onParamChange('folderPath' , function(value) {
 
 $(document).on('click', '[ajax-href]', function(e) {
     ajax_href = $(this).attr('ajax-href');
-    ajax_source = $(this).attr('ajax-source'); //container to load from href
-
     QueryStringRouter.setParam('folderPath', ajax_href);
     //also make sure that search will be hidden when loading a folder
     QueryStringRouter.removeParam('showSearch', {doNotCreateHistoryState: true});
