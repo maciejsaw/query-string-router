@@ -148,7 +148,7 @@ var QueryStringRouter = (function() {
 		retriggerOnParamChange: retriggerOnParamChange,
 		retriggerOnParamChangeForAll: retriggerOnParamChangeForAll,
 		removeParam: removeParam,
+		version: '1.0'
 	}
 
 })();
-
