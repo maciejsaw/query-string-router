@@ -10,7 +10,7 @@ Benefits for users:
 - Back button in the browser goes back to previous state, for example closes an overlay or goes back to previous tab
 
 ## What is "Query string"?
-It's the part of URL that comes after '?' symbol. For example if we take Google search URL: ```https://www.google.pl/search?q=googlemaps&oq=googlemaps&aqs=chrome..69i57j0l5.1142j0j4&sourceid=chrome&ie=UTF-8#q=dragon+ball```. the Query string is ```?q=googlemaps&oq=googlemaps&aqs=chrome..69i57j0l5.1142j0j4&sourceid=chrome&ie=UTF-8#q=dragon+ball```
+It's the part of URL that comes after '?' symbol. For example if we take Google search URL: ```https://www.google.pl/search?q=googlemaps&oq=googlemaps&aqs=chrome..69i57j0l5.1142j0j4&sourceid=chrome&ie=UTF-8#q=dragon+ball``` the query string is ```?q=googlemaps&oq=googlemaps&aqs=chrome..69i57j0l5.1142j0j4&sourceid=chrome&ie=UTF-8#q=dragon+ball```
 
 ## Why QueryStringRouter?
 The concept of router is often used in popular frameworks like Angular, Backbone, React, Meteor. QueryStringRouter enables you to have similar capabilities without the complexity of above mentioned frameworks. 
