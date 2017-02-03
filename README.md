@@ -53,16 +53,6 @@ When you click the ```#tab-contact```
 - the URL will update to ```www.yourpage.com/?actveTab=contact```
 - the onParamChange action will be triggered
 
-## Q&A:
-#### Are onParamChange actions retriggered each time I set params?
-No, the action will only run when param changed. This prevents the unneccessary flickering of screen and redundant DOM updates.
-#### Why there are 3 scripts to load?
-This package makes use of 'jQuery', 'jQuery deparam' plugin and 'mini-meteor.js'. I assume that you already have jQuery, so we need to load 'deparam' plugin, 'mini-meteor' and the 'query-string-router' itself
-#### Can I use boolean values in params?
-Yes, but note that they will be treated like strings. To be on the save side in your conditional statements you should use: ```if (value === 'true')```  instead o ```if (value === true)``` 
-#### Does it work in old browsers?
-No, because it relies on 'pushstate'
-
 ## List of methods:
 | Method        | Arguments           | Description  |
 | ------------- |-------------| -----|
@@ -88,6 +78,15 @@ No, because it relies on 'pushstate'
 - [See demo with examples](http://querystringrouter-demo.webflow.io/)
 - [See more examples with code snippets](https://github.com/maciejsaw/query-string-router/blob/master/example-snippets.md)
 
+## Q&A:
+#### Are onParamChange actions retriggered each time I set params?
+No, the action will only run when param changed. This prevents the unneccessary flickering of screen and redundant DOM updates.
+#### Why there are 3 scripts to load?
+This package makes use of 'jQuery', 'jQuery deparam' plugin and 'mini-meteor.js'. I assume that you already have jQuery, so we need to load 'deparam' plugin, 'mini-meteor' and the 'query-string-router' itself
+#### Can I use boolean values in params?
+Yes, but note that they will be treated like strings. To be on the save side in your conditional statements you should use: ```if (value === 'true')```  instead o ```if (value === true)``` 
+#### Does it work in old browsers?
+No, because it relies on 'pushstate'
 
 ## Credits:
 - QueryStringRouter is based on Meteor.js Tracker front-end library and [repackaged by Deanius](https://github.com/deanius/mini-meteor) 
