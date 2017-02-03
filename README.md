@@ -23,7 +23,8 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 
 ### Step 1: add router to your website
 - Your website needs to use jQuery
-- Add these scripts at the end of your HTML code, before the end of body tag
+- Add the below scripts at the end of your HTML code, before the end of body tag (consider hosting the scripts on your server)
+- The scripts weight is about 15kb when gzipped
 ```
 <script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/4d2b8b39/external-deps/mini-meteor.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/AceMetrix/jquery-deparam/master/jquery-deparam.js"></script>
