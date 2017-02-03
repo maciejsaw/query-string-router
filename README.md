@@ -1,6 +1,9 @@
 # Query String Router
 Easy to use router. Enables you to control everything on your page using reactive queryString params. 
 
+## Demo
+[See demo with examples](http://querystringrouter-demo.webflow.io/)
+
 ## What is "Router"?
 It's a concept of controlling your website state with URL, without reloading your website. You update the URL, and something should happen. You visit the same URL directly, the same thing should happen. 
 
