@@ -2,7 +2,7 @@
 Easy to use router. Enables you to control everything on your page using reactive queryString params. 
 
 ## What is "Router"?
-It's a concept of controlling your website state with URL, without reloading your website. You update the URL, and something should happen. You visit the same URL directly, the same thing should happen. 
+It's a concept of controlling your website state with URL, without reloading your website. You update the URL, and something should happen. When you visit the same URL directly, the same thing should happen. 
 
 ## Why QueryStringRouter?
 The concept of router is often used in popular frameworks like Angular, Backbone, React, Meteor. QueryStringRouter enables you to have similar capabilities without the complexity of above mentioned frameworks. 
