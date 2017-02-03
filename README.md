@@ -1,5 +1,5 @@
 # Query String Router
-Easy to use router. Enables you to control everything on your page using reactive queryString params. 
+Easy to use router. Enables you to control everything on your page using reactive URL address params. 
 
 ## What is "Router"?
 It's a concept of controlling your website state with URL, without reloading your website. You update the URL, and something should happen. When you visit the same URL directly, the same thing should happen. 
