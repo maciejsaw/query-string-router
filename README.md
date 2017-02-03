@@ -58,7 +58,7 @@ When you click the ```#tab-contact```
 | ------------- |-------------| -----|
 | setParam      | key, value, options | Updates the param in URL. If the param was not set before, it will be appended to URL. Options are optional, you can pass an options object with ```{doNotCreateHistoryState: true}``` which might be useful for some cases |
 | setFreshParams      | objectWithNewParams, options |   Resets all existing params and sets new params. Optional ```doNotCreateHistoryState```  |
-| setDefaultRootParams | - | Sets some params if user visited the root of URL. Use this to set some initial state, for example load a content of default tab |
+| setDefaultRootParams | - | Sets some params if user visited the root of URL. Use this to set some initial state, for example load the most recent blog post, so that if users share link it will link to this post, not to the root |
 | removeParam | key, options | Removes a chosen param. For example you can remove a param to close a modal. Optional ```doNotCreateHistoryState``` which might be useful to prevent back button to reopen the modal again. |
 | getParam | key | Returns an object with value of selected param |
 | getAllParams | - | Returns an object with all query string params |
