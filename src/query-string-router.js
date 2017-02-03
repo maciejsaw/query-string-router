@@ -90,6 +90,8 @@ var QueryStringRouter = (function() {
 
 	function setFreshParams(newParamsObj, options) {
 		var newQueryString = $.param(newParamsObj);
+
+		options = options || {};
 		if (options.doNotCreateHistoryState === true) {
 			window.history.replaceState('','', '?'+newQueryString);
 		} else {
@@ -131,7 +133,7 @@ var QueryStringRouter = (function() {
 	function setDefaultRootParams(paramsObjects) {
 		$(document).ready(function() {
 			if (window.location.pathname === "/" & window.location.search === "") {
-				QueryStringRouter.setFreshParam(paramsObjects, {doNotCreateHistoryState: true});
+				setFreshParams(paramsObjects, {doNotCreateHistoryState: true});
 			}
 		});
 	}
