@@ -68,13 +68,14 @@ When you click the ```#tab-contact```
 
 ## Example usages:
 - Switching tabs, so that it is possible to go back with back button or link directly to this tab
-- Showing/hiding modals and overlays that support back button 
+- Showing/hiding modals and overlays that support back button, which is super important on mobile devices
 - Showing/hiding modals and overlays with different content that is loaded with ajax
 - Expanding/collapsing sections, for example search results
 - Switching a flag when a certain link was opened
 - Loading content into central panel, for example loading folder content
 - Hiding an overlay when escape key is used
 - Loading different fullscreen modules into the DOM
+- Independet navigation for components, for example you can have a separate "Sign-up" flow in overlay with working back button
 - [See demo with examples](http://querystringrouter-demo.webflow.io/)
 - [See more examples with code snippets](https://github.com/maciejsaw/query-string-router/blob/master/example-snippets.md)
 
