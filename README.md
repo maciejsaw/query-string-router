@@ -9,7 +9,7 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 - It enforces a simple convention, that all the navigation state should be stored in the URL in a consistent way
 - You can store pretty complex things in the URL, like objects, arrays etc. 
 - QueryStringRouter handles the URL encoding for you
-- Flexibility without complexity
+- Reactivity and flexibility, with little code
 
 ## Benefits for users
 - Faster website, because everything works without reloading
