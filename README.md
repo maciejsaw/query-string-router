@@ -16,7 +16,7 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 - Users can share a link directly to the screen that they see, for example directly to a modal or specific tab
 - Back button in the browser goes back to previous state, for example closes an overlay or goes back to previous tab
 
-### Demo
+## Demo
 [See demo with examples](http://querystringrouter-demo.webflow.io/)
 
 ## Quick Start
