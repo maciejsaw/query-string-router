@@ -79,7 +79,6 @@ var QueryStringRouter = (function() {
 		var newQueryString = $.param(queryStringParams);
 
 		options = options || {};
-		console.log(options);
 		if (options.doNotCreateHistoryState === true) {
 			window.history.replaceState('','', '?'+newQueryString);
 		} else {
@@ -150,33 +149,4 @@ var QueryStringRouter = (function() {
 	}
 
 })();
-
-//Note that you don't need to store routes in one file. It's better to keep them together with features,
-//so that you can use their functions after they are defined
-
-// QueryStringRouter.onParamChange('openModal' , function(value) {
-// 	if (value === 'true') {
-// 		console.log('modal will be open!');
-// 	} else {
-// 		console.log('hide  modal!');
-// 	}
-// });
-
-// QueryStringRouter.onParamChange('activeTab' , function(value) {
-// 	if (value === 'comments') {
-// 		console.log('switch tab to comments');
-// 	} else if (value === 'products') {
-// 		console.log('switch tab to products');
-// 	} else if (value === 'pictures') {
-// 		console.log('switch tab to pictures');
-// 	}
-// });
-
-// QueryStringRouter.onParamChange('centralPanelFolderPath' , function(value) {
-// 	if (typeof value != 'undefined') { //how to make sure that you don't need to write this
-// 		console.log('in the central panel, a folder with path '+value+' will be loaded');
-// 	}
-// });
-
-// QueryStringRouter.retriggerOnParamChange('activeTab');
 
