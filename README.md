@@ -80,7 +80,7 @@ No, because it relies on 'pushstate'
 - Loading content into central panel, for example loading folder content
 - Hiding an overlay when escape key is used
 - Loading different fullscreen modules into the DOM
-[See examples with code snippets](https://github.com/maciejsaw/query-string-router/blob/master/example-snippets.md)
+- [See examples with code snippets](https://github.com/maciejsaw/query-string-router/blob/master/example-snippets.md)
 
 
 ## Credits:
