@@ -140,7 +140,7 @@ var QueryStringRouter = (function() {
 		setParam: queryStringRouterSetParam,
 		getAllParams: processQueryStringParams,
 		setFreshParams: setFreshParams,
-		setInitialDefaultParams: setDefaultRootParams,
+		setDefaultRootParams: setDefaultRootParams,
 		getParam: queryStringRouterGetReactiveParam,
 		onParamChange: onParamChange,
 		retriggerOnParamChange: retriggerOnParamChange,
