@@ -27,7 +27,7 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 ```
 <script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/4d2b8b39/external-deps/mini-meteor.min.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/AceMetrix/jquery-deparam/master/jquery-deparam.js"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/4d2b8b39/src/query-string-router.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/maciejsaw/query-string-router/31080163/src/query-string-router.js"></script>
 ```
 ### Step 2: set the URL params, for example when something is clicked
 ```javascript
