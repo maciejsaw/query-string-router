@@ -18,6 +18,7 @@ The concept of router is often used in popular frameworks like Angular, Backbone
 - You can store pretty complex things in the URL, like objects, arrays etc. 
 - QueryStringRouter handles the URL encoding for you
 - Reactivity and flexibility, with little amount of code
+- Syntax following jQuery conventions
 
 ## Demo
 [See demo with examples](http://querystringrouter-demo.webflow.io/)
