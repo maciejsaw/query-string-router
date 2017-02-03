@@ -9,9 +9,12 @@ Benefits for users:
 - Users can share a link directly to the screen that they see, for example directly to a modal or specific tab
 - Back button in the browser goes back to previous state, for example closes an overlay or goes back to previous tab
 
+## What is "Query string"?
+It's the part of URL that comes after '?' symbol. For example if we take Google search URL: ```https://www.google.pl/search?q=googlemaps&oq=googlemaps&aqs=chrome..69i57j0l5.1142j0j4&sourceid=chrome&ie=UTF-8#q=dragon+ball```. the Query string is ```?q=googlemaps&oq=googlemaps&aqs=chrome..69i57j0l5.1142j0j4&sourceid=chrome&ie=UTF-8#q=dragon+ball```
+
 ## Why QueryStringRouter?
 The concept of router is often used in popular frameworks like Angular, Backbone, React, Meteor. QueryStringRouter enables you to have similar capabilities without the complexity of above mentioned frameworks. 
-- It enforces a simple convention, that all the navigation state should be stored in the URL in a consistent way
+- It enforces a simple convention, that all the navigation state should be stored in the URL in a consistent way, as a queryString
 - You can store pretty complex things in the URL, like objects, arrays etc. 
 - QueryStringRouter handles the URL encoding for you
 - Reactivity and flexibility, with little amount of code
