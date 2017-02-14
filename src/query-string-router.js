@@ -113,14 +113,20 @@ var QueryStringRouter = (function() {
 			actionFunction(param);
 		});
 
-		//store the action on param in a separate object, so that we can retrigger this route manually
+		//store the action on param in a separate array, so that we can retrigger this route manually
 		//because this might be needed for ajax loaded content etc.
-		actionsOnParamChange[key] = actionFunction;
+		if (typeof actionsOnParamChange[key] === 'undefined') {
+			actionsOnParamChange[key] = [];
+		}
+		actionsOnParamChange[key].push(actionFunction);
 	}
 
 	function retriggerOnParamChange(key) {
 		var param = getQueryStringParam(key);
-		actionsOnParamChange[key](param);
+		var arrayOfFunctionsAssociatedWithThisParam = actionsOnParamChange[key];
+		$.each(arrayOfFunctionsAssociatedWithThisParam, function(index, value) {
+			value(param);
+		});
 	}
 
 	function retriggerOnParamChangeForAll() {
