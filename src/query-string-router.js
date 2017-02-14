@@ -131,8 +131,7 @@ var QueryStringRouter = (function() {
 
 	function retriggerOnParamChangeForAll() {
 		$.each(actionsOnParamChange, function(key, value) {
-			var param = getQueryStringParam(key);
-			actionsOnParamChange[key](param);
+			retriggerOnParamChange(key);
 		});
 	}
 
@@ -158,3 +157,4 @@ var QueryStringRouter = (function() {
 	}
 
 })();
+
